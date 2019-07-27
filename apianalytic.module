@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Contains apisign.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function apianalytic_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the apisign module.
+    case 'help.page.apianalytic':
+      $output = '';
+      $output .= '<h3>' . t('Api analytic OCB') . '</h3>';
+      $output .= '<p>' . t('This display information what you enter your application.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function apianalytic_theme() {
+  // We use a template file to allow for translation of blocks of content.
+  // Therefore we need to add this content at the theming layer.
+  return [
+    'apianalytic' => [
+      'render element' => 'form',
+    ]
+  ];
+}

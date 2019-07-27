@@ -1,0 +1,9 @@
+
+apianalytic.get_api:
+  path: '/apianalytic/get'
+  defaults:
+    _controller: 'Drupal\apianalytic\Controller\ApianalyticController::renderResult'
+    _title: 'API Analytics'
+  methods:  [POST]
+  requirements:
+    _access: 'TRUE'

@@ -1,0 +1,8 @@
+name: Api Analytics OCB
+type: module
+description: 'Api Analytics of OCB'
+package: OCB
+version: '8.x-1.0'
+core: '8.x'
+project: 'ocb'
+datestamp: 1509116288
